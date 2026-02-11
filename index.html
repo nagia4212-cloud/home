@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenJacket - Premium Fintech Platform for Golfers</title>
-    <meta name="description" content="대한민국 600만 골퍼의 새로운 결제 기준, 그린재킷. 단순 결제를 넘어 골프 문화를 혁신하는 프리미엄 핀테크 플랫폼 via cashless payment and ESG impact.">
+    <meta name="description"
+        content="대한민국 600만 골퍼의 새로운 결제 기준, 그린재킷. 단순 결제를 넘어 골프 문화를 혁신하는 프리미엄 핀테크 플랫폼 via cashless payment and ESG impact.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Placeholder for FontAwesome, might need user's kit or newer version -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for FontAwesome, might need user's kit or newer version -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- Background Animation Layer -->
+    <!-- Background Animation Layer - Updated to Canvas -->
+    <canvas id="hero-canvas" class="hero-canvas"></canvas>
     <div class="bg-animation">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+        <!-- Kept as fallback/overlay -->
         <div class="grid-overlay"></div>
     </div>
 
@@ -41,23 +47,26 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero" id="home">
-        <div class="container hero-content">
-            <h1 class="fade-in-up">GreenJacket</h1>
-            <h2 class="fade-in-up delay-1">대한민국 600만 골퍼의 새로운 기준</h2>
-            <p class="fade-in-up delay-2">단순한 결제를 넘어, 골프 컬쳐를 혁신합니다.</p>
-            <div class="hero-visual fade-in delay-3">
-                <!-- Abstract Tech Visual built with CSS -->
-                <div class="tech-circle"></div>
-                <div class="tech-line line-1"></div>
-                <div class="tech-line line-2"></div>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1 class="fade-in-up">GreenJacket</h1>
+                <h2 class="fade-in-up delay-1">대한민국 600만 골퍼의 새로운 기준</h2>
+                <p class="fade-in-up delay-2">단순한 결제를 넘어, 골프 컬쳐를 혁신합니다.</p>
+                <div class="hero-cta fade-in-up delay-3">
+                    <a href="#" class="btn-primary">Download App</a>
+                </div>
+            </div>
+
+            <!-- New Right-side Visual -->
+            <div class="hero-visual-container fade-in delay-2">
+                <!-- Visuals handled by full-screen canvas -->
             </div>
         </div>
     </header>
 
     <!-- Company Introduction -->
-    <section class="section company" id="company">
+    <section class="section company section-alt" id="company">
         <div class="container">
             <div class="section-header fade-in-up">
                 <h3>What is GreenJacket?</h3>
@@ -128,6 +137,71 @@
         </div>
     </section>
 
+    <!-- Content Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Payment Process Section (New) -->
+    <section class="section process section-alt" id="process">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h3>HOW IT WORKS</h3>
+                <h2>간편하고 빠르게.<br>캐디피 결제, 카드로 해보셨나요?</h2>
+            </div>
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="process-step fade-in-up delay-1">
+                    <div class="step-phone">
+                        <div class="phone-screen placeholder-qr">
+                            <i class="fas fa-qrcode"></i>
+                            <span>Scan QR</span>
+                        </div>
+                    </div>
+                    <div class="step-text">
+                        <span class="step-num">01</span>
+                        <h4>QR을 스캔하세요</h4>
+                        <p>캐디의 QR코드를 카메라로 스캔만 하세요.</p>
+                    </div>
+                </div>
+                <!-- Arrow -->
+                <div class="step-arrow fade-in delay-2"><i class="fas fa-chevron-right"></i></div>
+                <!-- Step 2 -->
+                <div class="process-step fade-in-up delay-2">
+                    <div class="step-phone">
+                        <div class="phone-screen placeholder-form">
+                            <div class="form-line"></div>
+                            <div class="form-line"></div>
+                            <div class="form-btn"></div>
+                        </div>
+                    </div>
+                    <div class="step-text">
+                        <span class="step-num">02</span>
+                        <h4>결제 내용을 기입하세요</h4>
+                        <p>결제 금액과 정보를 간단히 입력하세요.</p>
+                    </div>
+                </div>
+                <!-- Arrow -->
+                <div class="step-arrow fade-in delay-3"><i class="fas fa-chevron-right"></i></div>
+                <!-- Step 3 -->
+                <div class="process-step fade-in-up delay-3">
+                    <div class="step-phone">
+                        <div class="phone-screen placeholder-done">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Success</span>
+                        </div>
+                    </div>
+                    <div class="step-text">
+                        <span class="step-num">03</span>
+                        <h4>간편하게 결제하세요</h4>
+                        <p>비밀번호 입력 한 번이면 결제 완료!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Divider -->
+    <div class="section-divider"></div>
+
     <!-- Solution / Pain Points -->
     <section class="section solution" id="solution">
         <div class="container">
@@ -156,7 +230,7 @@
     </section>
 
     <!-- Partners -->
-    <section class="section partners" id="partners">
+    <section class="section partners section-alt" id="partners">
         <div class="container">
             <div class="section-header fade-in-up">
                 <h3>Partnership</h3>
@@ -228,4 +302,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
